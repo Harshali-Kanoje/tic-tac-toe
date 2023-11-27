@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(51, 49, 49);
+  background-color: rgb(36, 35, 35);
   color: white;
 }
 
@@ -7,7 +7,7 @@ body {
   font-size: 50px;
 }
 .heading{
-  color: blueviolet;
+  color: Aqua;
   font-size: 70px;
   font-weight: bold;
   /* font-family:monospace */
@@ -15,6 +15,7 @@ body {
 
 .current-player{
   font-size: 20px;
+  color: Aqua;
 }
 .player-container{
   display: flex;
@@ -88,7 +89,7 @@ body {
 }
 
 .box:hover {
-  background-color: rgb(39, 38, 38);
+  background-color: rgb(48, 47, 47);
   /* box-shadow: 0 0 10px 4px  #ffbf80; */
   /* border: none; */
   transition: 0.5s;
@@ -96,8 +97,8 @@ body {
 }
 
 .reset-btn{
-  background-color: blueviolet;
-  color: white;
+  background-color: Aqua;
+  color: black;
   border: none;
   padding: 10px 30px;
   border-radius: 10px;
@@ -105,9 +106,9 @@ body {
   display: block;
   margin: 10px auto;
   width: 300px;
-
+font-weight: bold;
 }
 
 .player{
-  color: white;
+  color: aqua;
 }

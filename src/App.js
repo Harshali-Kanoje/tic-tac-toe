@@ -18,7 +18,7 @@ const App = () => {
   });
    
   const checkWinner = () => {
-    const symbol = player === 1 ? "🙋‍♀️" : "🙋‍♂️";
+    const symbol = player === 1 ? "🩵" : "🤍";
     if(board[1] === symbol && board[2] === symbol && board[3] === symbol)
     {
       setWinner(player)
@@ -51,6 +51,14 @@ const App = () => {
     {
       setWinner(player)
     }
+    else if(board[1] === symbol && board[5] === symbol && board[9] === symbol)
+    {
+      setWinner(player)
+    }
+    else if(board[3] === symbol && board[5] === symbol && board[7] === symbol)
+    {
+      setWinner(player)
+    }
     setPlayer(player === 1 ? 2 : 1)
   }
 
@@ -63,11 +71,11 @@ const App = () => {
 
     if(player === 1)
     {
-      setBoard({...board,[boxNo]:"🙋‍♀️"})
+      setBoard({...board,[boxNo]:"🩵"})
     }
     else
     {
-      setBoard({...board,[boxNo]:"🙋‍♂️"})
+      setBoard({...board,[boxNo]:"🤍"})
     }
 
     // checkWinner(player)
@@ -99,11 +107,11 @@ const App = () => {
       <h1 className='text-center first-head'><span className='heading'>T</span>ic <span className='heading'>T</span>ac <span className='heading'> T</span>oe</h1>
       
       <div>
-        <p className='text-center current-player'>Current Player : {player === 1?"🙋‍♀️":"🙋‍♂️"}</p>
+        <p className='text-center current-player'>Current Player : {player === 1?"🩵":"🤍"}</p>
       </div>
-      {winner ? <h1 className='text-center'>Winner is : {winner === 1?"🙋‍♀️":"🙋‍♂️"}</h1>: null }
+      {winner ? <h1 className='text-center'>Winner is : {winner === 1?"🩵":"🤍"}</h1>: null }
       <div className='player-container'>
-        <span className='player'> Player 1 🙋‍♀️</span>
+        <span className='player'> Player 1 : 🩵</span>
         
       
       <div className='board'>
@@ -143,7 +151,7 @@ const App = () => {
           </div>
         </div>
       </div>
-      <span> Player 2 🙋‍♂️</span>
+      <span className='player'> Player 2 : 🤍</span>
       </div>
       
       <button type='button' onClick={() =>{
