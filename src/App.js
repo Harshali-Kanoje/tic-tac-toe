@@ -96,56 +96,60 @@ const App = () => {
 
   return (
     <div>
-      <h1 className='text-center'> Tic Tac Toe</h1>
-      <div className='player-container'>
-        <span> Player 1 🙋‍♀️</span>
-        <span> Player 2 🙋‍♂️</span>
-      </div>
+      <h1 className='text-center first-head'><span className='heading'>T</span>ic <span className='heading'>T</span>ac <span className='heading'> T</span>oe</h1>
+      
       <div>
-        <p className='text-center'>Current Player : {player === 1?"🙋‍♀️":"🙋‍♂️"}</p>
+        <p className='text-center current-player'>Current Player : {player === 1?"🙋‍♀️":"🙋‍♂️"}</p>
       </div>
+      {winner ? <h1 className='text-center'>Winner is : {winner === 1?"🙋‍♀️":"🙋‍♂️"}</h1>: null }
+      <div className='player-container'>
+        <span className='player'> Player 1 🙋‍♀️</span>
+        
+      
       <div className='board'>
         <div className='row'>
-          <div className='box' onClick={() => {play(1)}}>
+          <div className='box box1' onClick={() => {play(1)}}>
             {board[1]}
           </div>
-          <div className='box' onClick={() => {play(2)}}>
+          <div className='box box2' onClick={() => {play(2)}}>
           {board[2]}
           </div>
-          <div className='box' onClick={() => {play(3)}}>
+          <div className='box box3' onClick={() => {play(3)}}>
           {board[3]}
           </div>
         </div>
 
         <div className='row'>
-          <div className='box' onClick={() => {play(4)}}>
+          <div className='box box4' onClick={() => {play(4)}}>
           {board[4]}
           </div>
-          <div className='box' onClick={() => {play(5)}}>
+          <div className='box box5' onClick={() => {play(5)}}>
           {board[5]}
           </div>
-          <div className='box' onClick={() => {play(6)}}>
+          <div className='box box6' onClick={() => {play(6)}}>
           {board[6]}
           </div>
         </div>
 
         <div className='row'>
-          <div className='box' onClick={() => {play(7)}}>
+          <div className='box box7' onClick={() => {play(7)}}>
           {board[7]}
           </div>
-          <div className='box'onClick={() => {play(8)}}>
+          <div className='box box8'onClick={() => {play(8)}}>
           {board[8]}
           </div>
-          <div className='box' onClick={() => {play(9)}}>
+          <div className='box box9' onClick={() => {play(9)}}>
           {board[9]}
           </div>
         </div>
       </div>
-
-      {winner ? <h1>Winner is : {winner === 1?"🙋‍♀️":"🙋‍♂️"}</h1>: null }
+      <span> Player 2 🙋‍♂️</span>
+      </div>
+      
       <button type='button' onClick={() =>{
         reset()
-      }}>Reset</button>
+      }}
+      className='reset-btn'>Reset</button>
     </div>
   )
 }
